@@ -25,13 +25,15 @@ $ git push origin --delete REMOTE_BRANCH
 ```
 $ git branch
 * master
-$ git pull // sync latest code with master branch
 Already up-to-date.
 $ git checkout -b feature
 $ vim feature.js
 $ git add .
 $ git commit -am "[Feature] developed new feature1"
 $ git commit -am "[Feature] developed new feature2"
+$ git checkout master
+$ git pull // sync latest code with master branch
+$ git checkout feature
 $ git rebase master
 Applying .. 
 $ git checkout master
