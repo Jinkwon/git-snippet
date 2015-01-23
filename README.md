@@ -19,3 +19,22 @@ $ git add .
 $ git branch -rd origin/REMOTE_BRANCH
 OR
 $ git push origin --delete REMOTE_BRANCH
+```
+
+### REBASE 로 여럿이서 작업하기
+```
+$ git branch
+* master
+$ git pull // sync latest code with master branch
+Already up-to-date.
+$ git checkout -b feature
+$ vim feature.js
+$ git add .
+$ git commit -am "[Feature] developed new feature1"
+$ git commit -am "[Feature] developed new feature2"
+$ git rebase master
+Applying .. 
+$ git checkout master
+$ git merge --no-ff -m "[Feature] developed feature"
+$ git push
+```
